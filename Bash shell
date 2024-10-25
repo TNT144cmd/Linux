@@ -1,0 +1,5 @@
+## run bash shell: (test.sh)
+./test.sh
+## Cấp quyền cho file:
+chmod: 744, 777,... Check trên: [https://chmod-calculator.com/]
+
