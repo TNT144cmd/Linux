@@ -36,6 +36,7 @@ VD:
 - Check quyền của file: ls -l 
 
 ## Biến:
+ VD:
   Name= "Nhan"  // không được có dấu cách chỗ "Name="
   echo "Hello ${Name}
   exit 0
@@ -43,7 +44,7 @@ VD:
 ## Ngắt chuỗi:
   ${parameter:offset:length}
 
-VD:
+ VD:
   enum=123456789
   echo ${enum:1:5}
 => 23456
@@ -56,3 +57,34 @@ VD:
 => 78
   echo ${enum: -3}
 => 789
+## Variable
+  VD: 
+    Currentdir= $(pwd)
+    echo "path: $Currendir" // show ra đường dẫn hiện tại
+    exit 0
+## Tính toán:
+  - ${parameter}
+  - $(command)
+  - $((expression))
+    VD:
+        x= 12
+        y= 5
+        echo $(($x + $y))
+        exit 0
+  - bc để lấy số thập phân, scale=n
+    VD:
+        echo "scale=2; 5/2" | bc
+## Range
+  echo {1,2,4,nhan}
+  => 1 2 4 nhan
+  echo {1..5}
+  => 1 2 3 4 5
+  echo {a..g}
+  => a b c d e f g
+  echo {1..10..2}
+  => 1 3 5 7 9
+  echo Count{1..6..2}
+  => Count1 Count3 Count5
+    
+
+
