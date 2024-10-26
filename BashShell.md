@@ -75,23 +75,26 @@ VD:
     VD:
         echo "scale=2; 5/2" | bc
 ## Range
-  echo {1,2,4,nhan}
+ 1.  echo {1,2,4,nhan}
   => 1 2 4 nhan
-  echo {1..5}
+ 2. echo {1..5}
   => 1 2 3 4 5
-  echo {a..g}
+ 3. echo {a..g}
   => a b c d e f g
-  echo {1..10..2}
+ 4. echo {1..10..2}
   => 1 3 5 7 9
-  echo Count{1..6..2}
+ 5. echo Count{1..6..2}
   => Count1 Count3 Count5
 
 ## Special pramameter
   $0: tên chính script file đang chạy
   $*: chứa tất cả tham số được đưa vào script, nó được xem như một chuỗi chứa tất cả
   $@: chứa tất cả tham số nhưng phân thành các số riêng lẻ
-  $?: trạng thái thoát ra của lệnh ngay trước đó được chạy
+  $?: trạng thái trả về của lệnh ngay trước đó được chạy
   $$: Số tiến trình (processID) của shell hiện tại. 
+
+## Function:
+  
     
 
 
